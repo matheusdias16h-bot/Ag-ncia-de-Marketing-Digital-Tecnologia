@@ -1,0 +1,81 @@
+/* ===== GLOBAL ===== */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; scroll-behavior:smooth; }
+body { background:#f4f4f4; color:#111; }
+.container { width:90%; max-width:1200px; margin:auto; }
+
+/* ===== NAVBAR ===== */
+nav { background:#111; color:#fff; position:sticky; top:0; z-index:100; }
+.nav-container { display:flex; justify-content:space-between; align-items:center; padding:15px 0; }
+nav .logo { font-size:1.5rem; font-weight:700; }
+.nav-links { list-style:none; display:flex; gap:20px; transition:0.3s; }
+.nav-links li a { color:#fff; text-decoration:none; font-weight:500; }
+.nav-links li a:hover { color:#C9A24D; }
+.burger { display:none; cursor:pointer; font-size:1.5rem; color:#fff; }
+
+/* ===== HERO ===== */
+.hero { position:relative; background:#111 url('https://source.unsplash.com/1600x900/?technology,marketing') no-repeat center/cover; color:#fff; text-align:center; padding:150px 20px; overflow:hidden; }
+.hero h1 { font-size:3rem; margin-bottom:20px; animation:fadeInDown 1s; }
+.hero p { font-size:1.2rem; margin-bottom:30px; animation:fadeInDown 1.2s; }
+.hero .btn { font-size:1.2rem; padding:15px 30px; animation:fadeInUp 1.5s; }
+
+/* HERO ANIMATION BUBBLES */
+.hero-animation span { position:absolute; display:block; width:20px; height:20px; background:rgba(201,162,77,0.5); border-radius:50%; animation:bubble 8s infinite; }
+.hero-animation span:nth-child(1){ left:10%; animation-delay:0s;}
+.hero-animation span:nth-child(2){ left:30%; animation-delay:2s;}
+.hero-animation span:nth-child(3){ left:50%; animation-delay:4s;}
+.hero-animation span:nth-child(4){ left:70%; animation-delay:6s;}
+@keyframes bubble { 0% { bottom:-50px; transform:scale(0); } 50%{ transform:scale(1);} 100%{ bottom:100%; transform:scale(0); } }
+@keyframes fadeInDown { from{opacity:0; transform:translateY(-50px);} to{opacity:1; transform:translateY(0);} }
+@keyframes fadeInUp { from{opacity:0; transform:translateY(50px);} to{opacity:1; transform:translateY(0);} }
+
+/* ===== SERVICES ===== */
+.services { padding:80px 0; background:#fff; text-align:center; }
+.services h2 { font-size:2.5rem; margin-bottom:50px; }
+.service-cards { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+.service-cards .card { background:#f4f4f4; padding:30px; border-radius:12px; width:250px; transition:0.3s; cursor:pointer; text-align:center; }
+.service-cards .card i { font-size:2rem; margin-bottom:15px; color:#C9A24D; }
+.service-cards .card:hover { background:#C9A24D; color:#fff; transform:translateY(-10px); }
+
+/* ===== PORTFOLIO ===== */
+.portfolio { padding:80px 0; background:#eee; text-align:center; }
+.portfolio h2 { font-size:2.5rem; margin-bottom:50px; }
+.portfolio-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+.portfolio-grid img { width:100%; border-radius:12px; transition:0.3s; }
+.portfolio-grid img:hover { transform:scale(1.05); }
+
+/* ===== COUNTDOWN ===== */
+.countdown { padding:80px 0; background:#111; color:#fff; text-align:center; }
+.countdown h2 { font-size:2.5rem; margin-bottom:40px; }
+#timer { display:flex; justify-content:center; gap:20px; font-size:2rem; }
+#timer div { text-align:center; background:rgba(201,162,77,0.2); padding:20px; border-radius:12px; }
+#timer small { display:block; font-size:0.8rem; margin-top:5px; }
+.countdown .btn { margin-top:20px; }
+
+/* ===== POPUP LEAD ===== */
+.popup-lead { position:fixed; top:0; left:0; width:100%; height:100%; display:none; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:1000; }
+.popup-lead .popup-content { background:#fff; padding:40px; border-radius:12px; width:90%; max-width:400px; position:relative; text-align:center; }
+.popup-lead .close { position:absolute; top:10px; right:15px; font-size:1.5rem; cursor:pointer; }
+.popup-lead .btn { margin-top:15px; }
+
+/* ===== TESTIMONIALS ===== */
+.testimonials { padding:80px 0; background:#fff; text-align:center; }
+.testimonials h2 { font-size:2.5rem; margin-bottom:50px; }
+.testimonial-cards { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+.testimonial-card { background:#f4f4f4; padding:30px; border-radius:12px; width:300px; }
+
+/* ===== CONTACT ===== */
+.contact { padding:80px 0; background:#eee; text-align:center; }
+.contact h2 { font-size:2.5rem; margin-bottom:40px; }
+.contact input, .contact textarea { width:100%; padding:12px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc; }
+.success-msg { color:green; margin-top:10px; }
+
+/* ===== FOOTER ===== */
+footer { background:#111; color:#fff; text-align:center; padding:30px 20px; }
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .nav-links { display:none; flex-direction:column; background:#111; position:absolute; top:60px; right:0; width:200px; padding:20px; border-radius:8px; }
+  .nav-links.active { display:flex; }
+  .burger { display:block; }
+  .service-cards, .testimonial-cards { flex-direction:column; align-items:center; }
+  #timer { flex-direction:column; gap:15px; }
