@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agência Digital Avançada</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="container nav-container">
+      <div class="logo">Agência X</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#services">Serviços</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#countdown">Promoção</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+      <div class="burger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="hero">
+    <div class="hero-content container">
+      <h1>Transformamos ideias em resultados digitais</h1>
+      <p>Design, Marketing e Tecnologia para levar sua marca ao próximo nível.</p>
+      <a href="#contact" class="btn">Solicitar Orçamento</a>
+    </div>
+    <div class="hero-animation">
+      <span></span><span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <h2>Nossos Serviços</h2>
+      <div class="service-cards">
+        <div class="card"><i class="fas fa-bullhorn"></i><h3>Marketing Digital</h3><p>Campanhas estratégicas para gerar vendas e leads.</p></div>
+        <div class="card"><i class="fas fa-paint-brush"></i><h3>Design Criativo</h3><p>Identidade visual e design de alta conversão.</p></div>
+        <div class="card"><i class="fas fa-code"></i><h3>Web & Apps</h3><p>Sites, landing pages e aplicativos responsivos.</p></div>
+        <div class="card"><i class="fas fa-chart-line"></i><h3>Consultoria</h3><p>Estratégias personalizadas para crescer consistentemente.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <h2>Nosso Portfolio</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item"><img src="https://source.unsplash.com/400x300/?technology" alt="Projeto 1"></div>
+        <div class="portfolio-item"><img src="https://source.unsplash.com/400x300/?marketing" alt="Projeto 2"></div>
+        <div class="portfolio-item"><img src="https://source.unsplash.com/400x300/?design" alt="Projeto 3"></div>
+        <div class="portfolio-item"><img src="https://source.unsplash.com/400x300/?app" alt="Projeto 4"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN PROMO -->
+  <section class="countdown" id="countdown">
+    <div class="container">
+      <h2>Oferta Exclusiva - Cadastre-se antes que acabe!</h2>
+      <div id="timer">
+        <div><span id="days">00</span><small>DIAS</small></div>
+        <div><span id="hours">00</span><small>HORAS</small></div>
+        <div><span id="minutes">00</span><small>MINUTOS</small></div>
+        <div><span id="seconds">00</span><small>SEGUNDOS</small></div>
+      </div>
+      <button class="btn" onclick="showPopup()">Quero Aproveitar!</button>
+    </div>
+  </section>
+
+  <!-- POP-UP LEAD -->
+  <div id="popupLead" class="popup-lead">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h3>Cadastre-se agora!</h3>
+      <form id="popupForm">
+        <input type="text" id="popupName" placeholder="Seu nome" required>
+        <input type="email" id="popupEmail" placeholder="Seu email" required>
+        <button type="submit" class="btn">Enviar</button>
+        <p id="popupSuccess" class="success-msg"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <h2>O que nossos clientes dizem</h2>
+      <div class="testimonial-cards">
+        <div class="testimonial-card"><p>"A Agência X transformou nosso negócio online. Excelente trabalho!"</p><strong>- Lucas M.</strong></div>
+        <div class="testimonial-card"><p>"Profissionais competentes e criativos. Recomendo 100%!"</p><strong>- Mariana R.</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Entre em Contato</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Seu nome" required>
+        <input type="email" id="email" placeholder="Seu email" required>
+        <textarea id="message" placeholder="Escreva sua mensagem" rows="5" required></textarea>
+        <button type="submit" class="btn">Enviar Mensagem</button>
+        <p id="contactSuccess" class="success-msg"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Agência Digital Avançada. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
